@@ -33,6 +33,10 @@ public class ActionHandler {
         return courseCode + number;
     }
 
+    private String queryProgram(String program)
+    {
+        return program;
+    }
     private String query_building(String program, String building) {
         return program + building;
     }
@@ -124,12 +128,13 @@ public class ActionHandler {
             case "query_help":
                 break;
             case "query_programs":
+                String programName="";
                 try {
-                    return jobj.getString("literal");
+                     programName=(jobj.getJSONObject("concepts").getJSONArray("program").getJSONObject(0).getString("value"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                break;
+                return this.queryProgram(programName);
             case "query_studies":
                 break;
             case "query_website":

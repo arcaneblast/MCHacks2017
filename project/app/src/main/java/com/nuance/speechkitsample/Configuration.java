@@ -13,8 +13,8 @@ public class Configuration {
 
     //All fields are required.
     //Your credentials can be found in your Nuance Developers portal, under "Manage My Apps".
-    public static final String APP_KEY = "33b828aa81e3c8f9f87870d4d1915d1c68ebb7db9d5ae599ae21576798fd33ccb55b76363e3e2f36b79f0b883168a599535c75f0b65a8a657ce1cc14deffe093";
-    public static final String APP_ID = "NMDPTRIAL_jiapeng_wu_mail_mcgill_ca20170128130430";
+    public static final String APP_KEY = "636d4bf5f37fbe3f15973927dcffa089035d98d38e138499898896b4a7efb50a5c00ff4f7fbd8e9554c8bc30c75db9cbba519e486522e2eeab78a25267575cc4";
+    public static final String APP_ID = "NMDPTRIAL_thecharleslagace_gmail_com20170128144042";
     public static final String SERVER_HOST = "nmsps.dev.nuance.com";
     public static final String SERVER_PORT = "443";
 
@@ -23,7 +23,7 @@ public class Configuration {
     public static final Uri SERVER_URI = Uri.parse("nmsps://" + APP_ID + "@" + SERVER_HOST + ":" + SERVER_PORT);
 
     //Only needed if using NLU
-    public static final String CONTEXT_TAG = "M5037_A2332_2";
+    public static final String CONTEXT_TAG = "M5037_A2337";
 
     public static final PcmFormat PCM_FORMAT = new PcmFormat(PcmFormat.SampleFormat.SignedLinear16, 16000, 1);
     public static final String LANGUAGE_CODE = (Configuration.LANGUAGE.contains("!") ? "eng-USA" : Configuration.LANGUAGE);

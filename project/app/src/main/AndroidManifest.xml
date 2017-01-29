@@ -32,6 +32,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />>
         </activity>
+
+        <activity
+            android:name=".AChartEnginePieChartActivity"
+            android:label="@string/title_activity_asr"
+            android:parentActivityName=".NLUActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />>
+        </activity>
+
         <activity
             android:name=".NLUActivity"
             android:label="@string/title_activity_nlu"

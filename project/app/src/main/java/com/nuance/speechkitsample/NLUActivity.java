@@ -1,5 +1,6 @@
 package com.nuance.speechkitsample;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,6 +27,12 @@ import com.nuance.speechkit.TransactionException;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
 
 /**
  * This Activity is built to demonstrate how to perform NLU (Natural Language Understanding).
@@ -57,7 +64,7 @@ public class NLUActivity extends DetailActivity implements View.OnClickListener 
     private Button clearLogs;
     private Button nextQuestion;
     private Button toggleReco;
-
+    private Activity thisactivity;
     private ProgressBar volumeBar;
 
     private Session speechSession;
@@ -74,7 +81,7 @@ public class NLUActivity extends DetailActivity implements View.OnClickListener 
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_nlu);
         this.myid = this.getIntent().getIntExtra("QUESTION_ID" , -100);
-
+        this.thisactivity = this;
         questionLabel = (TextView) findViewById(R.id.questionLabel);
         this.questionLabel.setText(this.getIntent().getStringExtra("QUESTION_STRING"));
         detectionType = (RadioGroup)findViewById(R.id.detection_type_picker );
@@ -275,11 +282,11 @@ public class NLUActivity extends DetailActivity implements View.OnClickListener 
                     logs.append("\n");
                     aj.main(resultString);
                     for(int i=0; i<aj.goalNames.length; i++) {
-                        logs.append("Goal " + aj.goalNames[i] + " value "  + aj.goalValues[i] + "\n");
+                        logs.append("Goal: " + aj.goalNames[i] + " value: "  + aj.goalValues[i] + "\n");
                     }
                     logs.append("\n");
                     for(int i=0; i<aj.skillNames.length; i++) {
-                        logs.append("Skill " + aj.skillNames[i] + " value "  + aj.skillValues[i] + "\n");
+                        logs.append("Skill: " + aj.skillNames[i] + " value: "  + aj.skillValues[i] + "\n");
                     }
 
                     logs.append("\n");
@@ -290,6 +297,49 @@ public class NLUActivity extends DetailActivity implements View.OnClickListener 
                     e.printStackTrace();
                     logs.append("exception1");
                 }
+                ArrayList <Pair> tmp = new ArrayList<>();
+                for(int i=0; i<aj.skillValues.length; i++) {
+                    Pair p = new Pair(aj.skillValues[i], aj.skillNames[i]);
+                    tmp.add(p);
+                }
+                Collections.sort(tmp);
+
+
+                AChartEnginePieChartActivity.NAME_LIST[0] = tmp.get(0).getRight();
+                AChartEnginePieChartActivity.NAME_LIST[1] = tmp.get(1).getRight();
+                AChartEnginePieChartActivity.NAME_LIST[2] = tmp.get(2).getRight();
+                AChartEnginePieChartActivity.NAME_LIST[3] = tmp.get(3).getRight();
+
+                AChartEnginePieChartActivity.VALUES[0] = tmp.get(0).getLeft();
+                AChartEnginePieChartActivity.VALUES[1] = tmp.get(1).getLeft();
+                AChartEnginePieChartActivity.VALUES[2] = tmp.get(2).getLeft();
+                AChartEnginePieChartActivity.VALUES[3] = tmp.get(3).getLeft();
+
+
+                //clear it for second phase
+                tmp.clear();
+
+                for(int i=0; i<aj.goalValues.length; i++) {
+                    Pair p = new Pair(aj.goalValues[i], aj.goalNames[i]);
+                    tmp.add(p);
+                }
+                Collections.sort(tmp);
+                AChartEnginePieChartActivity.NAME_LIST[4] = tmp.get(0).getRight();
+                AChartEnginePieChartActivity.NAME_LIST[5] = tmp.get(1).getRight();
+                AChartEnginePieChartActivity.NAME_LIST[6] = tmp.get(2).getRight();
+                AChartEnginePieChartActivity.NAME_LIST[7] = tmp.get(3).getRight();
+
+                AChartEnginePieChartActivity.VALUES[4] = tmp.get(0).getLeft();
+                AChartEnginePieChartActivity.VALUES[5] = tmp.get(1).getLeft();
+                AChartEnginePieChartActivity.VALUES[6] = tmp.get(2).getLeft();
+                AChartEnginePieChartActivity.VALUES[7] = tmp.get(3).getLeft();
+
+                Intent intent = new Intent(thisactivity.getBaseContext(), AChartEnginePieChartActivity.class) ;
+                if(intent != null) {
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.enter_left, R.anim.exit_left);
+                }
+
             } else {
                 try {
                     //logs.append("case2");
