@@ -296,24 +296,34 @@ public class AnalyzeJava {
     String[][][] goalKeywords = {{{"job", "1.0"},
             {"position", "0.5"},
             {"career", "0.7"},
-            {"work", "0.6"}
+            {"work", "0.6"},
+            {"become", "0.5"},
+            {"profession", "0.8"},
+            {"business", "0.7"},
+            {"office", "0.5"},
+            {"industr", "0.7"}
     },
             {{"internship", "1.0"},
                     {"position", "0.5"},
                     {"career", "0.3"},
                     {"work", "0.4"},
-                    {"experience", "0.5"}
+                    {"experience", "0.5"},
+                    {"trainee", "0.9"},
+                    {"summer", "0.5"}
             },
             {{"research", "1.0"},
                     {"position", "0.5"},
                     {"work", "0.5"},
                     {"laboratory", "0.9"},
-                    {"experience", "0.5"}
+                    {"experience", "0.5"},
+                    {"project", "0.6"},
+                    {"experiment", "0.8"}
             },
             {{"volunteer", "1.0"},
                     {"position", "0.5"},
                     {"experience", "0.6"},
-                    {"unpaid", "0.8"}
+                    {"unpaid", "0.8"},
+                    {"interest", "0.5"}
             },
             {{"exchange", "1.0"},
                     {"abroad", "1.0"},
