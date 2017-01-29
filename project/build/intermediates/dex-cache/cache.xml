@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Desktop/project/app/build/intermediates/exploded-aar/com.nuance/speechkit/2.1.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="aebf626d98ca7f8e275be4f5034ed3794333e5ed">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.nuance-speechkit-2.1.3_05b3943a8fe33d617f131ac098ce0e2d56376621/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_f609d4f87b73b41157267f1805c228879362a7e6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Desktop/project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_9216e4c3592b82fc43ad3babf29c4c69f3d05916/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Desktop/project/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_7b8eb9154366d78fa38c2816e1514f28f7cc212e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Desktop/project/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3cffad9e99a3971ace05942c3ba621bffe1a870d">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5d2f5499d169398736b48c51e9d2657cd6f5c693/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Desktop/project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.1_db1b74ef681922c83e134aeb3d905b89f254dbc0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/vasu/Desktop/project/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8a6207bdeb278fb029cefb85b9fa223965b8f709">
+        <dex dex="/Users/vasu/Desktop/project/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8208b5831f68002d103fe7e1ce7122a75fd00dd8/classes.dex" />
+    </item>
+
+</items>
