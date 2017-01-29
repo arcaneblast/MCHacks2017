@@ -43,7 +43,7 @@ public class ActionHandler {
 
     private String explain() {
         //to do andree
-        return "to do andree";
+        return "I'm the ultimate life form who is gonna control the world!";
     }
 
     private String query_costs(String program_fees) {
